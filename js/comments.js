@@ -2,7 +2,7 @@ var Comments = {};
 (function ($) {
   Comments.init = function () {
   	//insertar componentes
-  	this.insertHTML();
+  	this.insertHTML($("comment-widget"));
   	$("#add_comment").bind("click", this.addComment);	
   }
 
@@ -12,8 +12,8 @@ var Comments = {};
 	$("#new_comment").val("");
   }
 
-  Comments.insertHTML = function(){
-  	$("#comment_widget").html('<div id="row1" class="row"></div><div id="row2" class="row"></div>');
+  Comments.insertHTML = function(element){
+  	element.html('<div id="row1" class="row"></div><div id="row2" class="row"></div>');
   	$("#row1").append('<p>Comments:</p>')
 		.append('<div id="comment_area" class="col-xs-12"></div>');
   	$("#row2").append('<div class="col-xs-4"></div>')
