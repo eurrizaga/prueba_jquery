@@ -1,8 +1,11 @@
 var Comments = {};
 (function ($) {
   Comments.init = function () {
-    $("#add_comment").bind("click", this.addComment);	
-  }
+    $("#add_comment").bind("click", this.addComment);
+
+    var commentTemplate = _.template($('#comment_widget_template').html());
+    $('comment-widget').append(commentTemplate());
+  };
 
   Comments.addComment = function () {
     var new_text = $("#new_comment").val();
