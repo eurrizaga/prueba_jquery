@@ -14,21 +14,24 @@
             </div>
         </div>
         <script src = "js/jquery.js"></script>
+        <script src = "js/underscore.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/comments.js"></script>
         <script src = "js/app.js"></script>
-        <script >
-          (function ($) {
-            $("comment-widget").html('<div id="row1" class="col-xs-12"></div><div id="row2" class="col-xs-12"></div>');
-            $("#row1").append('<p>Comments:</p>')
-                .append('<ul id="comment_area" class="col-xs-12"></div>');
-            $("#row2").append('<div id= "new_comment_area" class="col-xs-12"></div>');
-            $("#new_comment_area").append('<p>Add new Comment</p>')
-                .append('<div><p>Enter your Name: </p><input type="text" id="name" value=""/></div>')
-                .append('<div><p>Enter your Comment: </p><textarea id="new_comment"></textarea></div>')
-                .append('<div align="right"><button id="add_comment" class="btn btn-success">ADD COMMENT</button></div>');
-            })(jQuery);
 
+        <script id="comment_widget_template" type="text/template">
+          <div id="row1" class="col-xs-12">
+            <p>Comments:</p>
+            <ul id="comment_area" class="col-xs-12"></ul>
+          </div>
+          <div id="row2" class="col-xs-12">
+            <div id= "new_comment_area" class="col-xs-12">
+              <p>Add new Comment</p>
+              <div><p>Enter your Name: </p><input type="text" id="name" value=""/></div>
+              <div><p>Enter your Comment: </p><textarea id="new_comment"></textarea></div>
+              <div align="right"><button id="add_comment" class="btn btn-success">ADD COMMENT</button></div>
+            </div>
+          </div>
         </script>
     </body>
 </html>
